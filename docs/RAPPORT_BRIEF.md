@@ -30,3 +30,5 @@ const login = async (username, password) => {
  ```
 2. Mise en place de la CI qui va générer un rapport lighthouse
 fichier: .github/workflows/pipeline.yml
+
+3.
