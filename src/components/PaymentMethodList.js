@@ -59,7 +59,7 @@ export default function PaymentMethodList() {
     return (
         <div className="payment-method-list">
             <h2>Payment Methods</h2>
-            <button className="fab-button" onClick={() => setShowNewForm(true)}>+</button>
+            <button className="fab-button" onClick={() => setShowNewForm(true)}>Add a paiement method</button>
 
             <div className="payment-methods">
                 {paymentMethods.map(method => (

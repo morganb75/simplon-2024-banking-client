@@ -61,7 +61,7 @@ export default function CategoryList() {
     return (
         <div className="category-list">
             <h2>Categories</h2>
-            <button className="fab-button" onClick={() => setShowNewForm(true)}>+</button>
+            <button className="fab-button" onClick={() => setShowNewForm(true)}>Add a category</button>
 
             <div className="categories">
                 {categories.map(category => (

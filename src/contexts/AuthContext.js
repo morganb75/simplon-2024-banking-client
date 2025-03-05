@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const data = await loginService.login(username, password);
       setAuth(data);
+      console.log(data)
       return data;
     } catch (error) {
       console.error('Login failed:', error);

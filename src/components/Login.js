@@ -10,7 +10,8 @@ export default function Login() {
     const [error, setError] = useState('');
     const {login, register} = useAuth();
     const [authLoading, setAuthLoading] = useState(false);
-
+    const {auth} = useAuth()
+    console.log(auth?.accesstoken)
     const handleSubmit = useCallback(async (e) => {
         e.preventDefault();
         setAuthLoading(true);

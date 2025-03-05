@@ -250,12 +250,12 @@ textarea {
 
 /* FAB button */
 .fab-button {
-  position: fixed;
+  /*position: fixed;*/
   bottom: 2rem;
   right: 2rem;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  /*width: 56px;*/
+  /*height: 56px;*/
+  /*border-radius: 50%;*/
   background-color: #007bff;
   color: white;
   border: none;

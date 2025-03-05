@@ -31,4 +31,8 @@ const login = async (username, password) => {
 2. Mise en place de la CI qui va générer un rapport lighthouse
 fichier: .github/workflows/pipeline.yml
 
-3.
+3. Mise en place de la possibilité directe d'ajout d'Item sur chaque combobox
+avec les donnees de formulaires qui restent entre les differentes navigations.
+
+4. Modification du "Add Button" pour une meilleure compréhension de l'interface
+5. Remise en place du contexte AuthContext pour gérer les sessions user

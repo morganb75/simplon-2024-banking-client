@@ -114,7 +114,7 @@ export default function TransactionList() {
     return (
         <div className="transaction-list">
             <h2>Transactions</h2>
-            <button className="fab-button" onClick={() => setShowNewForm(true)}>+</button>
+            <button className="fab-button" onClick={() => setShowNewForm(true)}>Add a Transaction</button>
 
             {Object.entries(groupedTransactions).map(([date, transactions]) => (
                 <div key={date} className="date-group">
