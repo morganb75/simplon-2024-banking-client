@@ -1,7 +1,6 @@
 import React, {useCallback, useState} from 'react';
 import {useAuth} from '../contexts/AuthContext';
 import Loader from './Loader';
-import {useNavigate} from "react-router-dom";
 
 export default function Login() {
     // isLogin tell if the page is the login page or the register page
