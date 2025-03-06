@@ -11,7 +11,7 @@ export default function Login() {
     const {login, register} = useAuth();
     const [authLoading, setAuthLoading] = useState(false);
     const {auth} = useAuth()
-    console.log(auth?.accesstoken)
+    console.log(auth?.accessToken)
     const handleSubmit = useCallback(async (e) => {
         e.preventDefault();
         setAuthLoading(true);

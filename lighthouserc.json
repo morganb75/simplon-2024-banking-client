@@ -1,7 +1,14 @@
 {
   "ci": {
     "collect": {
-      "url": ["http://localhost:3000"],
+      "url": ["http://localhost:3000",
+        "http://localhost:3000/categories",
+        "http://localhost:3000/payment-methods"],
+      "settings": {
+        "extraheaders": {
+          "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtb3JnYW4iLCJpYXQiO…YlBF-tBDSUA311ChsxnSf8UbtTrTn4oZJXYyiZj4axcsgIwBg"
+        }
+      },
       "startServerCommand": "http-server ./build -p 3000",
       "startServerReadyPattern": "Available on",
       "numberOfRuns": 1
