@@ -8,6 +8,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 
 export default function TransactionList() {
     const {auth} = useAuth();
+    console.log(auth)
     const [transactions, setTransactions] = useState([]);
     const [categories, setCategories] = useState([]);
     const [paymentMethods, setPaymentMethods] = useState([]);

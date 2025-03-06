@@ -10,15 +10,14 @@ export default function Login() {
     const [error, setError] = useState('');
     const {login, register} = useAuth();
     const [authLoading, setAuthLoading] = useState(false);
-    const {auth} = useAuth()
-    // console.log(auth?.accessToken)
+
     const handleSubmit = useCallback(async (e) => {
         e.preventDefault();
         setAuthLoading(true);
         setError('');
 
         const success = isLogin
-            ? await login(username, password)
+            ? await login(username, password, isChecked)
             : await register(username, password);
 
         if (!success) {
@@ -27,6 +26,12 @@ export default function Login() {
         setAuthLoading(false);
 
     }, [isLogin, username, password, login, register, setAuthLoading]);
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleChange = (event) => {
+        setIsChecked(event.target.checked);
+    };
 
     return (
         <div className="login-container">
@@ -50,9 +55,13 @@ export default function Login() {
                 <button type="submit">
                     {isLogin ? 'Login' : 'Register'}
                 </button>
-            <button onClick={() => setIsLogin(!isLogin)}>
-                {isLogin ? 'Need to register?' : 'Already have an account?'}
-            </button>
+                <button onClick={() => setIsLogin(!isLogin)}>
+                    {isLogin ? 'Need to register?' : 'Already have an account?'}
+                </button>
+                <label>
+                    <input type="checkbox" checked={isChecked} onChange={handleChange}/>
+                    Remember me
+                </label>
             </form>
         </div>
     );

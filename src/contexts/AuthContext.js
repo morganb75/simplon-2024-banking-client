@@ -6,11 +6,14 @@ const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState(null);
 
-  const login = async (username, password) => {
+  const login = async (username, password,isChecked) => {
     try {
       const data = await loginService.login(username, password);
       setAuth(data);
-      console.log(data)
+      localStorage.setItem('authToken',data.accessToken)
+      if (isChecked){
+        sessionStorage.setItem('authToken',data.accessToken)
+      }
       return data;
     } catch (error) {
       console.error('Login failed:', error);

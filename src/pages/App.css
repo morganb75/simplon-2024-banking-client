@@ -1,6 +1,6 @@
 .app-container {
   font-family: Arial, sans-serif;
-  max-width: 600px;
+  /*max-width: 600px;*/
   margin: 0 auto;
   padding: 16px;
 }
@@ -8,8 +8,23 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 16px;
+  height:15vh;
+  background-color: #666666;
+}
+.main {
+  height:70vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:10vh;
+  background-color: #666666;
 }
 
 .header-title {
@@ -308,8 +323,11 @@ textarea {
 }
 
 /* Main content area */
-main {
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/*main {*/
+/*  padding: 1rem;*/
+/*  max-width: 1200px;*/
+/*  margin: 0 auto;*/
+/*}*/
+
+
+
